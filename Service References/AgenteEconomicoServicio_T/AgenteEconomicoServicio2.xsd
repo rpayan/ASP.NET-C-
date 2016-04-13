@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="AgenteEconomico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Administrador" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AgenteEconomicoAgenteTipo" nillable="true" type="tns:ArrayOfAgenteEconomicoAgenteTipo" />
+      <xs:element minOccurs="0" name="ApartadoPostal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Celular" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Elevacion" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fax" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaInicioOperacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdAgenteEconomico" type="xs:int" />
+      <xs:element minOccurs="0" name="IdBandaUTM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUbicacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="IdZonaUTM" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Latitud" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Longitud" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="NombreAgente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Precision" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Telefono" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UtmEste" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UtmNorte" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Web" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="AgenteEconomico" nillable="true" type="tns:AgenteEconomico" />
+  <xs:complexType name="ArrayOfAgenteEconomicoAgenteTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AgenteEconomicoAgenteTipo" nillable="true" type="tns:AgenteEconomicoAgenteTipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgenteEconomicoAgenteTipo" nillable="true" type="tns:ArrayOfAgenteEconomicoAgenteTipo" />
+  <xs:complexType name="AgenteEconomicoAgenteTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AgenteEconomico" nillable="true" type="tns:AgenteEconomico" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdAgenteEconomico" type="xs:int" />
+      <xs:element minOccurs="0" name="IdAgenteEconomicoAgenteTipo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdAgenteEstado" type="xs:short" />
+      <xs:element minOccurs="0" name="IdAgenteTipo" type="xs:short" />
+      <xs:element minOccurs="0" name="IdMarcaCompania" type="xs:short" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TieneLicenciaOperacion" type="xs:boolean" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="AgenteEconomicoAgenteTipo" nillable="true" type="tns:AgenteEconomicoAgenteTipo" />
+  <xs:complexType name="ArrayOfAgenteEconomico">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AgenteEconomico" nillable="true" type="tns:AgenteEconomico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAgenteEconomico" nillable="true" type="tns:ArrayOfAgenteEconomico" />
+</xs:schema>

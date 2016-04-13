@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E942073D-94EF-4D63-BE35-DF3A2A9EF50B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ine.SihPublico.UI.Web</RootNamespace>
+    <AssemblyName>Ine.SihPublico.UI.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>E:\AjaxControlToolkit.Binary.NET4\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v14.2.Core, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v14.2, Version=14.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="INE.ServiciosWeb.Base, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Ine.Sih.Servicios\Contratos\INE.ServiciosWeb.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administracion\borrar.aspx" />
+    <Content Include="Administracion\CambiarContrasena.aspx" />
+    <Content Include="Ayuda\1351101475_warning_zoom21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\1354029616_lock_zoom15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\1354133115_forward_zoom46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\2010-02-10_-_csi_content.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\2010-02-10_-_csi_ftsearch.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\2010-02-10_-_csi_kwindex.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\2010-02-10_-_csi_popup_html.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\acerca_de_sih.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cambiar_contrasena.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cerrar_sesion.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cicon1.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cicon10.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cicon11.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cicon2.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\cicon_loadindex_ani.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\contrasena_expirada.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\default.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\helpman_navigation.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\helpman_settings.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\helpman_topicinit.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\highlight.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_0b96e311.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_12938629.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_20d8cde9.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_2586717c.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_30a3c3f1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_33d3e8d8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_633ed976.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_958533eb.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_a4ece6d5.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_b0747c16.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_b23e073c.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_bbed31d8.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_c52468ff.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_f2a6e016.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_f5afc476.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\hmfile_hash_fc4f3611.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\iniciar_sesion.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\jquery.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\logosih256_celeste_zoom49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\notes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\notificaciones.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\pantalla_principal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\registar_inventarios_y_ventas.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\settings.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\solicitar_contrasena_temporal.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\welcome_topic_2.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\zoom_index.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\zoom_pageinfo.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ayuda\zoom_search.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Estilos\Administracion\CambiarContrasena.css" />
+    <Content Include="Estilos\Controles\Boton.css" />
+    <Content Include="Imagenes\Accept.png" />
+    <Content Include="Imagenes\Agregar.png" />
+    <Content Include="Imagenes\Alerta.png" />
+    <Content Include="Imagenes\Alerta2.png" />
+    <Content Include="Imagenes\Ayuda.ico" />
+    <Content Include="Imagenes\Cancelar.png" />
+    <Content Include="Imagenes\Editar.png" />
+    <Content Include="Imagenes\Eliminar.png" />
+    <Content Include="Imagenes\Guardar.png" />
+    <Content Include="Imagenes\help.png" />
+    <Content Include="Imagenes\ImagenFondo.png" />
+    <Content Include="Imagenes\loading_spinner.gif" />
+    <Content Include="Imagenes\lock.png" />
+    <Content Include="Imagenes\TexturaFondo.png" />
+    <Content Include="Imagenes\Cuerpo.png" />
+    <Content Include="Imagenes\Encabezado.png" />
+    <Content Include="Imagenes\footer_b.png" />
+    <Content Include="Imagenes\header.jpg" />
+    <Content Include="Imagenes\login.jpg" />
+    <Content Include="Imagenes\LogoIne.png" />
+    <Content Include="Imagenes\logoSIH.gif" />
+    <Content Include="Imagenes\PiePagina.png" />
+    <Content Include="RegistroCentral\CSI\Inventario.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Scripts\Base\jquery.blockUI.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\RegistroCentral\CSI\Inventario.js" />
+    <Content Include="Scripts\Base\jquery.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Base\script.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\INE.ServiciosWeb.AgenteEconomico.Contrato.AgenteEconomico.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Base.ReglasNegocio.ResultadoOperacion.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.CapacidadAlmacenamiento.Contrato.CapacidadAlmacenamiento.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.Inventario.Contrato.Inventario.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.Inventario.Contrato.InventarioDetalle.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.Producto.Contrato.Producto.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Seguridad.Contrato.Accion.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Seguridad.Contrato.Cuenta.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Seguridad.Contrato.Rol.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Seguridad.Contrato.Servicio.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Seguridad.Contrato.Sesion.datasource" />
+    <Content Include="Properties\DataSources\INE.ServiciosWeb.Seguridad.Contrato.Sistema.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.UbicacionGeografica.Contrato.UbicacionGeografica.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.Venta.Contrato.Venta.datasource" />
+    <None Include="Properties\DataSources\INE.ServiciosWeb.Venta.Contrato.VentaDetalle.datasource" />
+    <Content Include="Estilos\Clases\General.css" />
+    <Content Include="Estilos\Controles\GridView.css" />
+    <Content Include="Estilos\RegistroCentral\CSI\Inventario.css" />
+    <Content Include="Estilos\Login.css" />
+    <Content Include="Estilos\Controles\Menu.css" />
+    <Content Include="Estilos\PaginasMaestras\SihPublica.css" />
+    <Content Include="Estilos\Selectores\Base.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\Base\jquery-1.4.1-vsdoc.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Base\jquery-1.4.1.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Scripts\Base\jquery-1.4.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\DataSources\Ine.Sih.Servicios.UbicacionGeografica.UbicacionGeografica.datasource" />
+    <None Include="Properties\PublishProfiles\CSI_Publico.pubxml" />
+    <None Include="Service References\AgenteEconomicoServicio_T\AgenteEconomicoServicio.wsdl" />
+    <None Include="Service References\AgenteEconomicoServicio_T\AgenteEconomicoServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgenteEconomicoServicio_T\AgenteEconomicoServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgenteEconomicoServicio_T\AgenteEconomicoServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgenteEconomicoServicio_T\AgenteEconomicoServicio3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AgenteEconomicoServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\AgenteEconomicoServicio_T\configuration.svcinfo" />
+    <None Include="Service References\AgenteEconomicoServicio_T\AgenteEconomicoServicio.disco" />
+    <Content Include="Service References\AgenteEconomicoServicio_T\Ine.SihPublico.UI.Web.AgenteEconomicoServicio_T.AgenteEconomico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\AgenteEconomicoServicio_T\Ine.SihPublico.UI.Web.AgenteEconomicoServicio_T.AgenteEconomicoAgenteTipo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\AgenteEconomicoServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\CapacidadAlmacenamientoServicio.wsdl" />
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\CapacidadAlmacenamientoServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\CapacidadAlmacenamientoServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\CapacidadAlmacenamientoServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\configuration.svcinfo" />
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\CapacidadAlmacenamientoServicio.disco" />
+    <Content Include="Service References\CapacidadAlmacenamientoServicio_T\Ine.SihPublico.UI.Web.CapacidadAlmacenamientoServicio_T.CapacidadAlmacenamiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\CapacidadAlmacenamientoServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\InventarioServicio_T\Ine.SihPublico.UI.Web.InventarioServicio_T.Inventario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\InventarioServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\InventarioServicio_T\configuration.svcinfo" />
+    <None Include="Service References\InventarioServicio_T\InventarioServicio.wsdl" />
+    <None Include="Service References\InventarioServicio_T\InventarioServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventarioServicio_T\InventarioServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventarioServicio_T\InventarioServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InventarioServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\InventarioServicio_T\InventarioServicio.disco" />
+    <Content Include="Service References\ProductoServicio_T\Ine.SihPublico.UI.Web.ProductoServicio_T.Producto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ProductoServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\ProductoServicio_T\configuration.svcinfo" />
+    <None Include="Service References\ProductoServicio_T\ProductoServicio.wsdl" />
+    <None Include="Service References\ProductoServicio_T\ProductoServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductoServicio_T\ProductoServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductoServicio_T\ProductoServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductoServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProductoServicio_T\ProductoServicio.disco" />
+    <Content Include="Service References\SeguridadServicio_T\Ine.SihPublico.UI.Web.SeguridadServicio_T.Accion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadServicio_T\Ine.SihPublico.UI.Web.SeguridadServicio_T.Cuenta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadServicio_T\Ine.SihPublico.UI.Web.SeguridadServicio_T.Rol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadServicio_T\Ine.SihPublico.UI.Web.SeguridadServicio_T.Servicio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadServicio_T\Ine.SihPublico.UI.Web.SeguridadServicio_T.Sesion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\SeguridadServicio_T\Ine.SihPublico.UI.Web.SeguridadServicio_T.Sistema.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SeguridadServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\SeguridadServicio_T\configuration.svcinfo" />
+    <None Include="Service References\SeguridadServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio.disco" />
+    <Content Include="Service References\UbicacionGeograficaServicio_T\Ine.SihPublico.UI.Web.UbicacionGeograficaServicio_T.UbicacionGeografica.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\UbicacionGeograficaServicio_T\Ine.SihPublico.UI.Web.UbicacionGeograficaServicio_T.UbicacionGeografica1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio.wsdl" />
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SeguridadServicio_T\SeguridadServicio5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UbicacionGeograficaServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\UbicacionGeograficaServicio_T\configuration.svcinfo" />
+    <None Include="Service References\UbicacionGeograficaServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\UbicacionGeograficaServicio_T\UbicacionGeograficaServicio.disco" />
+    <Content Include="Service References\VentaServicio_T\Ine.SihPublico.UI.Web.VentaServicio_T.Venta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UbicacionGeograficaServicio_T\UbicacionGeograficaServicio.wsdl" />
+    <None Include="Service References\UbicacionGeograficaServicio_T\UbicacionGeograficaServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UbicacionGeograficaServicio_T\UbicacionGeograficaServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UbicacionGeograficaServicio_T\UbicacionGeograficaServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VentaServicio_T\configuration91.svcinfo" />
+    <None Include="Service References\VentaServicio_T\configuration.svcinfo" />
+    <None Include="Service References\VentaServicio_T\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\VentaServicio_T\VentaServicio.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\VentaServicio_T\VentaServicio.wsdl" />
+    <None Include="Service References\VentaServicio_T\VentaServicio.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VentaServicio_T\VentaServicio1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\VentaServicio_T\VentaServicio2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administracion\borrar.aspx.cs">
+      <DependentUpon>borrar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\borrar.aspx.designer.cs">
+      <DependentUpon>borrar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\CambiarContrasena.aspx.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\CambiarContrasena.aspx.designer.cs">
+      <DependentUpon>CambiarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroCentral\CSI\Inventario.aspx.cs">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroCentral\CSI\Inventario.aspx.designer.cs">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasMaestras\SihPublica.Master.cs">
+      <DependentUpon>SihPublica.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasMaestras\SihPublica.Master.designer.cs">
+      <DependentUpon>SihPublica.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AgenteEconomicoServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CapacidadAlmacenamientoServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\InventarioServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductoServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SeguridadServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UbicacionGeograficaServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VentaServicio_T\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\Configuracion.cs" />
+    <Compile Include="Utils\Red.cs" />
+    <Compile Include="Utils\SeguridadLocal.cs" />
+    <Compile Include="Utils\Traductor.cs" />
+    <Compile Include="Utils\Usuario.cs" />
+    <Compile Include="Utils\UtilidadesDeArchivos.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Scripts\PaginasMaestras\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PaginasMaestras\SihPublica.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AgenteEconomicoServicio_T\" />
+    <WCFMetadataStorage Include="Service References\CapacidadAlmacenamientoServicio_T\" />
+    <WCFMetadataStorage Include="Service References\InventarioServicio_T\" />
+    <WCFMetadataStorage Include="Service References\ProductoServicio_T\" />
+    <WCFMetadataStorage Include="Service References\SeguridadServicio_T\" />
+    <WCFMetadataStorage Include="Service References\UbicacionGeograficaServicio_T\" />
+    <WCFMetadataStorage Include="Service References\VentaServicio_T\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57100</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

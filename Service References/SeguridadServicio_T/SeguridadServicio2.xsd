@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.ReglasNegocio" />
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" />
+  <xs:element name="IniciarSesion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ipRed" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ipCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreCliente" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="clave" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IniciarSesionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.ReglasNegocio" minOccurs="0" name="IniciarSesionResult" nillable="true" type="q1:ResultadoOperacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CerrarSesionPorID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSesion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CerrarSesionPorIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CerrarSesionPorIDResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentaPorAlias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentaPorAliasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerCuentaPorAliasResult" nillable="true" type="q2:Cuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentaPorID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idCuenta" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerCuentaPorIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerCuentaPorIDResult" nillable="true" type="q3:Cuenta" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoAccionesPorCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreInterfaz" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreServicio" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoAccionesPorCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerListadoAccionesPorCuentaResult" nillable="true" type="q4:ArrayOfAccion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSesionPorID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idSesion" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerSesionPorIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerSesionPorIDResult" nillable="true" type="q5:Sesion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasena">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveActual" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveNueva" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveNuevaConfirmacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CambiarContrasenaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.ReglasNegocio" minOccurs="0" name="CambiarContrasenaResult" nillable="true" type="q6:ResultadoOperacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoRolesPorCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoRolesPorCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerListadoRolesPorCuentaResult" nillable="true" type="q7:ArrayOfRol" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoSistemasPorCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoSistemasPorCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerListadoSistemasPorCuentaResult" nillable="true" type="q8:ArrayOfSistema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoServiciosPorCuenta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigoSistema" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nombreInterfaz" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoServiciosPorCuentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" minOccurs="0" name="ObtenerListadoServiciosPorCuentaResult" nillable="true" type="q9:ArrayOfServicio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPreguntaSecreta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="claveUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="preguntaSecreta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="respuestaSecreta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarPreguntaSecretaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.ReglasNegocio" minOccurs="0" name="GuardarPreguntaSecretaResult" nillable="true" type="q10:ResultadoOperacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarClaveTemporal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="preguntaSecreta" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="respuestaSecreta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EnviarClaveTemporalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.ReglasNegocio" minOccurs="0" name="EnviarClaveTemporalResult" nillable="true" type="q11:ResultadoOperacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPreguntaSecreta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombreUsuario" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPreguntaSecretaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtenerPreguntaSecretaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

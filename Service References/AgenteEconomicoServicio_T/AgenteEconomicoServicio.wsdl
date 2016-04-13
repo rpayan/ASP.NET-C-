@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AgenteEconomicoServicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAgenteEconomicoContrato_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerPorPersona_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorPersona" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerPorPersona_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPorPersonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListado" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoActivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoActivos" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoActivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoActivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoInactivos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoInactivos" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoInactivos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoInactivosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorIdAgenteEconomico" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorIdAgenteEconomicoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerAgenteEconomicoAgenteTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgenteEconomicoAgenteTipo" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerAgenteEconomicoAgenteTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgenteEconomicoAgenteTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerAgenteEconomicoInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgenteEconomicoInfo" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerAgenteEconomicoInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerAgenteEconomicoInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomicoAgenteTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorIdAgenteEconomicoAgenteTipo" />
+  </wsdl:message>
+  <wsdl:message name="IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomicoAgenteTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorIdAgenteEconomicoAgenteTipoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IAgenteEconomicoContrato">
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/Obtener" message="tns:IAgenteEconomicoContrato_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerResponse" message="tns:IAgenteEconomicoContrato_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorPersona">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerPorPersona" message="tns:IAgenteEconomicoContrato_ObtenerPorPersona_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerPorPersonaResponse" message="tns:IAgenteEconomicoContrato_ObtenerPorPersona_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListado" message="tns:IAgenteEconomicoContrato_ObtenerListado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoResponse" message="tns:IAgenteEconomicoContrato_ObtenerListado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoActivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoActivos" message="tns:IAgenteEconomicoContrato_ObtenerListadoActivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoActivosResponse" message="tns:IAgenteEconomicoContrato_ObtenerListadoActivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoInactivos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoInactivos" message="tns:IAgenteEconomicoContrato_ObtenerListadoInactivos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoInactivosResponse" message="tns:IAgenteEconomicoContrato_ObtenerListadoInactivos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorIdAgenteEconomico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoPorIdAgenteEconomico" message="tns:IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoPorIdAgenteEconomicoResponse" message="tns:IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomico_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgenteEconomicoAgenteTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerAgenteEconomicoAgenteTipo" message="tns:IAgenteEconomicoContrato_ObtenerAgenteEconomicoAgenteTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerAgenteEconomicoAgenteTipoResponse" message="tns:IAgenteEconomicoContrato_ObtenerAgenteEconomicoAgenteTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgenteEconomicoInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerAgenteEconomicoInfo" message="tns:IAgenteEconomicoContrato_ObtenerAgenteEconomicoInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerAgenteEconomicoInfoResponse" message="tns:IAgenteEconomicoContrato_ObtenerAgenteEconomicoInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorIdAgenteEconomicoAgenteTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoPorIdAgenteEconomicoAgenteTipo" message="tns:IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomicoAgenteTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoPorIdAgenteEconomicoAgenteTipoResponse" message="tns:IAgenteEconomicoContrato_ObtenerListadoPorIdAgenteEconomicoAgenteTipo_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IAgenteEconomicoContrato" type="tns:IAgenteEconomicoContrato">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPorPersona">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerPorPersona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListado">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoActivos">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoActivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoInactivos">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoInactivos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorIdAgenteEconomico">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoPorIdAgenteEconomico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgenteEconomicoAgenteTipo">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerAgenteEconomicoAgenteTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerAgenteEconomicoInfo">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerAgenteEconomicoInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorIdAgenteEconomicoAgenteTipo">
+      <soap:operation soapAction="http://tempuri.org/IAgenteEconomicoContrato/ObtenerListadoPorIdAgenteEconomicoAgenteTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AgenteEconomicoServicio">
+    <wsdl:port name="BasicHttpBinding_IAgenteEconomicoContrato" binding="tns:BasicHttpBinding_IAgenteEconomicoContrato">
+      <soap:address location="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

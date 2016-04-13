@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f99d366b-6608-4c54-a1ea-b2cf73e4d945" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InventarioServicio.xsd" MetadataType="Schema" ID="4bc44ee0-6838-4f57-8d5f-9eb55a20e0a7" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd2" />
+    <MetadataFile FileName="InventarioServicio.wsdl" MetadataType="Wsdl" ID="aa9e6953-2717-4e21-9045-d8b134f3e838" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?wsdl" />
+    <MetadataFile FileName="InventarioServicio.disco" MetadataType="Disco" ID="6294347c-a635-48e4-b659-795a92767d1c" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?disco" />
+    <MetadataFile FileName="InventarioServicio1.xsd" MetadataType="Schema" ID="07d62c7d-3fb3-4094-af15-abf347c49a7f" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd0" />
+    <MetadataFile FileName="InventarioServicio2.xsd" MetadataType="Schema" ID="535a5a9a-1686-4725-8607-024335dc05f4" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

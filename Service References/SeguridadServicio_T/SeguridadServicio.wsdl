@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SeguridadServicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.ReglasNegocio" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISeguridadContrato_IniciarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesion" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_IniciarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IniciarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_IniciarSesion_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q1:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_CerrarSesionPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSesionPorID" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_CerrarSesionPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CerrarSesionPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_CerrarSesionPorID_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q2:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerCuentaPorAlias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaPorAlias" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerCuentaPorAlias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaPorAliasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerCuentaPorAlias_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q3:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerCuentaPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaPorID" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerCuentaPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerCuentaPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerCuentaPorID_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q4:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoAccionesPorCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoAccionesPorCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoAccionesPorCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoAccionesPorCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoAccionesPorCuenta_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q5:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerSesionPorID_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSesionPorID" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerSesionPorID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerSesionPorIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerSesionPorID_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q6:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_CambiarContrasena_InputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContrasena" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_CambiarContrasena_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CambiarContrasenaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_CambiarContrasena_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q7:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoRolesPorCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoRolesPorCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoRolesPorCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoRolesPorCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoRolesPorCuenta_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q8:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoSistemasPorCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoSistemasPorCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoSistemasPorCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoSistemasPorCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoSistemasPorCuenta_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q9:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoServiciosPorCuenta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoServiciosPorCuenta" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoServiciosPorCuenta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoServiciosPorCuentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerListadoServiciosPorCuenta_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q10:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_GuardarPreguntaSecreta_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPreguntaSecreta" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_GuardarPreguntaSecreta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarPreguntaSecretaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_GuardarPreguntaSecreta_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q11:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_EnviarClaveTemporal_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarClaveTemporal" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_EnviarClaveTemporal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnviarClaveTemporalResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_EnviarClaveTemporal_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q12:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerPreguntaSecreta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPreguntaSecreta" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerPreguntaSecreta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerPreguntaSecretaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISeguridadContrato_ObtenerPreguntaSecreta_ExcepcionServicioFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Base.Excepciones" name="detail" element="q13:ExcepcionServicio" />
+  </wsdl:message>
+  <wsdl:portType name="ISeguridadContrato">
+    <wsdl:operation name="IniciarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/IniciarSesion" message="tns:ISeguridadContrato_IniciarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/IniciarSesionResponse" message="tns:ISeguridadContrato_IniciarSesion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/IniciarSesionExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_IniciarSesion_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesionPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/CerrarSesionPorID" message="tns:ISeguridadContrato_CerrarSesionPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/CerrarSesionPorIDResponse" message="tns:ISeguridadContrato_CerrarSesionPorID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/CerrarSesionPorIDExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_CerrarSesionPorID_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaPorAlias">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorAlias" message="tns:ISeguridadContrato_ObtenerCuentaPorAlias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorAliasResponse" message="tns:ISeguridadContrato_ObtenerCuentaPorAlias_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorAliasExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerCuentaPorAlias_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorID" message="tns:ISeguridadContrato_ObtenerCuentaPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorIDResponse" message="tns:ISeguridadContrato_ObtenerCuentaPorID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorIDExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerCuentaPorID_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoAccionesPorCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoAccionesPorCuenta" message="tns:ISeguridadContrato_ObtenerListadoAccionesPorCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoAccionesPorCuentaResponse" message="tns:ISeguridadContrato_ObtenerListadoAccionesPorCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoAccionesPorCuentaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerListadoAccionesPorCuenta_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSesionPorID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerSesionPorID" message="tns:ISeguridadContrato_ObtenerSesionPorID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerSesionPorIDResponse" message="tns:ISeguridadContrato_ObtenerSesionPorID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerSesionPorIDExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerSesionPorID_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/CambiarContrasena" message="tns:ISeguridadContrato_CambiarContrasena_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/CambiarContrasenaResponse" message="tns:ISeguridadContrato_CambiarContrasena_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/CambiarContrasenaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_CambiarContrasena_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoRolesPorCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoRolesPorCuenta" message="tns:ISeguridadContrato_ObtenerListadoRolesPorCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoRolesPorCuentaResponse" message="tns:ISeguridadContrato_ObtenerListadoRolesPorCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoRolesPorCuentaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerListadoRolesPorCuenta_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoSistemasPorCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoSistemasPorCuenta" message="tns:ISeguridadContrato_ObtenerListadoSistemasPorCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoSistemasPorCuentaResponse" message="tns:ISeguridadContrato_ObtenerListadoSistemasPorCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoSistemasPorCuentaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerListadoSistemasPorCuenta_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoServiciosPorCuenta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoServiciosPorCuenta" message="tns:ISeguridadContrato_ObtenerListadoServiciosPorCuenta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoServiciosPorCuentaResponse" message="tns:ISeguridadContrato_ObtenerListadoServiciosPorCuenta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerListadoServiciosPorCuentaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerListadoServiciosPorCuenta_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPreguntaSecreta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/GuardarPreguntaSecreta" message="tns:ISeguridadContrato_GuardarPreguntaSecreta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/GuardarPreguntaSecretaResponse" message="tns:ISeguridadContrato_GuardarPreguntaSecreta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/GuardarPreguntaSecretaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_GuardarPreguntaSecreta_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarClaveTemporal">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/EnviarClaveTemporal" message="tns:ISeguridadContrato_EnviarClaveTemporal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/EnviarClaveTemporalResponse" message="tns:ISeguridadContrato_EnviarClaveTemporal_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/EnviarClaveTemporalExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_EnviarClaveTemporal_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPreguntaSecreta">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerPreguntaSecreta" message="tns:ISeguridadContrato_ObtenerPreguntaSecreta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerPreguntaSecretaResponse" message="tns:ISeguridadContrato_ObtenerPreguntaSecreta_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ISeguridadContrato/ObtenerPreguntaSecretaExcepcionServicioFault" name="ExcepcionServicioFault" message="tns:ISeguridadContrato_ObtenerPreguntaSecreta_ExcepcionServicioFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISeguridadContrato" type="tns:ISeguridadContrato">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IniciarSesion">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/IniciarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CerrarSesionPorID">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/CerrarSesionPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaPorAlias">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorAlias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerCuentaPorID">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerCuentaPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoAccionesPorCuenta">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerListadoAccionesPorCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerSesionPorID">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerSesionPorID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CambiarContrasena">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/CambiarContrasena" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoRolesPorCuenta">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerListadoRolesPorCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoSistemasPorCuenta">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerListadoSistemasPorCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoServiciosPorCuenta">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerListadoServiciosPorCuenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarPreguntaSecreta">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/GuardarPreguntaSecreta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarClaveTemporal">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/EnviarClaveTemporal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerPreguntaSecreta">
+      <soap:operation soapAction="http://tempuri.org/ISeguridadContrato/ObtenerPreguntaSecreta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ExcepcionServicioFault">
+        <soap:fault use="literal" name="ExcepcionServicioFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SeguridadServicio">
+    <wsdl:port name="BasicHttpBinding_ISeguridadContrato" binding="tns:BasicHttpBinding_ISeguridadContrato">
+      <soap:address location="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

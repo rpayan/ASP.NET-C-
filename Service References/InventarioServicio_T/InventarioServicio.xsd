@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Inventario.Contrato" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Inventario.Contrato" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Inventario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HoraCorte" type="ser:duration" />
+      <xs:element minOccurs="0" name="IdAgenteEconomicoAgenteTipo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdInventario" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="InventarioDetalle" nillable="true" type="tns:ArrayOfInventarioDetalle" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Inventario" nillable="true" type="tns:Inventario" />
+  <xs:complexType name="ArrayOfInventarioDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InventarioDetalle" nillable="true" type="tns:InventarioDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventarioDetalle" nillable="true" type="tns:ArrayOfInventarioDetalle" />
+  <xs:complexType name="InventarioDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CapacidadInstalada" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FondoNoOperativo" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="IdInventario" type="xs:int" />
+      <xs:element minOccurs="0" name="IdInventarioDetalle" type="xs:int" />
+      <xs:element minOccurs="0" name="IdProductoxPresentacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="Inventario" nillable="true" type="tns:Inventario" />
+      <xs:element minOccurs="0" name="InventarioTotal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Transferencias" nillable="true" type="xs:decimal" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="InventarioDetalle" nillable="true" type="tns:InventarioDetalle" />
+  <xs:complexType name="ArrayOfInventario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Inventario" nillable="true" type="tns:Inventario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInventario" nillable="true" type="tns:ArrayOfInventario" />
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6d33dd85-1500-4730-9b1f-ad395cd5c008" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AgenteEconomicoServicio.xsd" MetadataType="Schema" ID="6db4780d-df1a-423c-b57d-1ed9806d9b91" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd0" />
+    <MetadataFile FileName="AgenteEconomicoServicio.wsdl" MetadataType="Wsdl" ID="8ad6f0a2-a679-4925-888d-c48e7089fdc8" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?wsdl" />
+    <MetadataFile FileName="AgenteEconomicoServicio1.xsd" MetadataType="Schema" ID="d1d2d7da-5f91-499b-baec-891ccfa90d09" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd3" />
+    <MetadataFile FileName="AgenteEconomicoServicio2.xsd" MetadataType="Schema" ID="7b3130dd-cbbc-425b-acd8-bfa87d8d25e0" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd2" />
+    <MetadataFile FileName="AgenteEconomicoServicio.disco" MetadataType="Disco" ID="7e3a7d0c-c298-4a96-a12b-a41cb44ca1b4" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?disco" />
+    <MetadataFile FileName="AgenteEconomicoServicio3.xsd" MetadataType="Schema" ID="8bf0235d-6261-4ec8-9982-5ec2a7ddbcd6" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

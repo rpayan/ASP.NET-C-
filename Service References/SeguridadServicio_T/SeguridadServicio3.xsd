@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Seguridad.Contrato" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Cuenta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Clave" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaExpiracionClave" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaUltimaModificacionClave" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="PreguntaSecreta" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RespuestaSecreta" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="SasAccion" nillable="true" type="tns:ArrayOfAccion" />
+      <xs:element minOccurs="0" name="SasAccion1" nillable="true" type="tns:ArrayOfAccion" />
+      <xs:element minOccurs="0" name="SasCuentaRol" nillable="true" type="tns:ArrayOfCuentaRol" />
+      <xs:element minOccurs="0" name="SasCuentaRol1" nillable="true" type="tns:ArrayOfCuentaRol" />
+      <xs:element minOccurs="0" name="SasCuentaRol2" nillable="true" type="tns:ArrayOfCuentaRol" />
+      <xs:element minOccurs="0" name="SasCuentaSistema" nillable="true" type="tns:ArrayOfCuentaSistema" />
+      <xs:element minOccurs="0" name="SasCuentaSistema1" nillable="true" type="tns:ArrayOfCuentaSistema" />
+      <xs:element minOccurs="0" name="SasCuentaSistema2" nillable="true" type="tns:ArrayOfCuentaSistema" />
+      <xs:element minOccurs="0" name="SasHistoricoClave" nillable="true" type="tns:ArrayOfHistoricoClave" />
+      <xs:element minOccurs="0" name="SasHistoricoClave1" nillable="true" type="tns:ArrayOfHistoricoClave" />
+      <xs:element minOccurs="0" name="SasInterfaz" nillable="true" type="tns:ArrayOfInterfaz" />
+      <xs:element minOccurs="0" name="SasInterfaz1" nillable="true" type="tns:ArrayOfInterfaz" />
+      <xs:element minOccurs="0" name="SasRol" nillable="true" type="tns:ArrayOfRol" />
+      <xs:element minOccurs="0" name="SasRol1" nillable="true" type="tns:ArrayOfRol" />
+      <xs:element minOccurs="0" name="SasServicio" nillable="true" type="tns:ArrayOfServicio" />
+      <xs:element minOccurs="0" name="SasServicio1" nillable="true" type="tns:ArrayOfServicio" />
+      <xs:element minOccurs="0" name="SasSesion" nillable="true" type="tns:ArrayOfSesion" />
+      <xs:element minOccurs="0" name="SasSesion1" nillable="true" type="tns:ArrayOfSesion" />
+      <xs:element minOccurs="0" name="SasSesion2" nillable="true" type="tns:ArrayOfSesion" />
+      <xs:element minOccurs="0" name="SasSistema" nillable="true" type="tns:ArrayOfSistema" />
+      <xs:element minOccurs="0" name="SasSistema1" nillable="true" type="tns:ArrayOfSistema" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="correo" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Cuenta" nillable="true" type="tns:Cuenta" />
+  <xs:complexType name="ArrayOfAccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Accion" nillable="true" type="tns:Accion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccion" nillable="true" type="tns:ArrayOfAccion" />
+  <xs:complexType name="Accion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdAccion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdModulo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Accion" nillable="true" type="tns:Accion" />
+  <xs:complexType name="Interfaz">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DescripcionInterfaz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdInterfaz" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreInterfaz" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasServicio" nillable="true" type="tns:ArrayOfServicio" />
+      <xs:element minOccurs="0" name="SasSistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Interfaz" nillable="true" type="tns:Interfaz" />
+  <xs:complexType name="ArrayOfServicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Servicio" nillable="true" type="tns:Servicio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfServicio" nillable="true" type="tns:ArrayOfServicio" />
+  <xs:complexType name="Servicio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DescripcionServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdInterfaz" type="xs:int" />
+      <xs:element minOccurs="0" name="IdServicio" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreServicio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasInterfaz" nillable="true" type="tns:Interfaz" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Servicio" nillable="true" type="tns:Servicio" />
+  <xs:complexType name="Sistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuentaSistema" nillable="true" type="tns:ArrayOfCuentaSistema" />
+      <xs:element minOccurs="0" name="SasInterfaz" nillable="true" type="tns:ArrayOfInterfaz" />
+      <xs:element minOccurs="0" name="SasRol" nillable="true" type="tns:ArrayOfRol" />
+      <xs:element minOccurs="0" name="SasSesion" nillable="true" type="tns:ArrayOfSesion" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Sistema" nillable="true" type="tns:Sistema" />
+  <xs:complexType name="ArrayOfCuentaSistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CuentaSistema" nillable="true" type="tns:CuentaSistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCuentaSistema" nillable="true" type="tns:ArrayOfCuentaSistema" />
+  <xs:complexType name="CuentaSistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCuentaSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta2" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasSistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="CuentaSistema" nillable="true" type="tns:CuentaSistema" />
+  <xs:complexType name="Rol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuentaRol" nillable="true" type="tns:ArrayOfCuentaRol" />
+      <xs:element minOccurs="0" name="SasSistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Rol" nillable="true" type="tns:Rol" />
+  <xs:complexType name="ArrayOfCuentaRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CuentaRol" nillable="true" type="tns:CuentaRol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCuentaRol" nillable="true" type="tns:ArrayOfCuentaRol" />
+  <xs:complexType name="CuentaRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCuentaRol" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRol" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta2" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasRol" nillable="true" type="tns:Rol" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="CuentaRol" nillable="true" type="tns:CuentaRol" />
+  <xs:complexType name="Sesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Codigo" type="ser:guid" />
+      <xs:element minOccurs="0" name="FechaHoraFinalizacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaHoraInicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IPCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IPRed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSesion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreCliente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SasCuenta" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta1" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasCuenta2" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="SasSistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Sesion" nillable="true" type="tns:Sesion" />
+  <xs:complexType name="HistoricoClave">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClaveActual" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="CuentaModificacion" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="CuentaRegistro" nillable="true" type="tns:Cuenta" />
+      <xs:element minOccurs="0" name="FechaCambioClave" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdCuenta" type="xs:int" />
+      <xs:element minOccurs="0" name="IdHistoricoClave" type="xs:int" />
+      <xs:element minOccurs="0" name="IdRed" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="NuevaClave" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="HistoricoClave" nillable="true" type="tns:HistoricoClave" />
+  <xs:complexType name="ArrayOfInterfaz">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Interfaz" nillable="true" type="tns:Interfaz" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInterfaz" nillable="true" type="tns:ArrayOfInterfaz" />
+  <xs:complexType name="ArrayOfRol">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Rol" nillable="true" type="tns:Rol" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRol" nillable="true" type="tns:ArrayOfRol" />
+  <xs:complexType name="ArrayOfSesion">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sesion" nillable="true" type="tns:Sesion" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSesion" nillable="true" type="tns:ArrayOfSesion" />
+  <xs:complexType name="ArrayOfHistoricoClave">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HistoricoClave" nillable="true" type="tns:HistoricoClave" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHistoricoClave" nillable="true" type="tns:ArrayOfHistoricoClave" />
+  <xs:complexType name="ArrayOfSistema">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Sistema" nillable="true" type="tns:Sistema" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSistema" nillable="true" type="tns:ArrayOfSistema" />
+</xs:schema>

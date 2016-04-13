@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Producto.Contrato" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Producto.Contrato" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="Producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CapacidadesAlmacenamiento" nillable="true" type="tns:ArrayOfCapacidadAlmacenamiento" />
+      <xs:element minOccurs="0" name="DescripcionProducto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdProductoTipo" type="xs:short" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreComercial" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreGenerico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProductoPresentacionTipos" nillable="true" type="tns:ArrayOfProductoPresentacionTipo" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Producto" nillable="true" type="tns:Producto" />
+  <xs:complexType name="ArrayOfCapacidadAlmacenamiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CapacidadAlmacenamiento" nillable="true" type="tns:CapacidadAlmacenamiento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCapacidadAlmacenamiento" nillable="true" type="tns:ArrayOfCapacidadAlmacenamiento" />
+  <xs:complexType name="CapacidadAlmacenamiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AnosVidaUtilTanque" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="CapacidadAlmacenamientoTanque" type="xs:int" />
+      <xs:element minOccurs="0" name="DiametroTuberia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FechaCierreTanque" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaInstalacionTanque" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdAgenteEconomico" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCapacidadAlmacenamiento" type="xs:int" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTanqueInstalacionTipo" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdTanqueTipo" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdTuberiaMarca" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdTuberiaMaterial" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdTuberiaTipo" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="IdentificacionTanque" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MedidasTanque" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Producto" nillable="true" type="tns:Producto" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="CapacidadAlmacenamiento" nillable="true" type="tns:CapacidadAlmacenamiento" />
+  <xs:complexType name="ProductoPresentacionTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AplicaISC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AplicaIVA" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CostoAdicionalDetallista" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoAdicionalMayorista" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CostoAdicionalMinorista" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FactorConversion" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IdPresentacionTipo" type="xs:short" />
+      <xs:element minOccurs="0" name="IdProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="IdProductoxPresentacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="0" name="Orden" type="xs:int" />
+      <xs:element minOccurs="0" name="Producto" nillable="true" type="tns:Producto" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="ProductoPresentacionTipo" nillable="true" type="tns:ProductoPresentacionTipo" />
+  <xs:complexType name="ArrayOfProductoPresentacionTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductoPresentacionTipo" nillable="true" type="tns:ProductoPresentacionTipo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProductoPresentacionTipo" nillable="true" type="tns:ArrayOfProductoPresentacionTipo" />
+  <xs:complexType name="ArrayOfProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Producto" nillable="true" type="tns:Producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProducto" nillable="true" type="tns:ArrayOfProducto" />
+</xs:schema>

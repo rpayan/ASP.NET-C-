@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" />
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/AgenteEconomicoServicio/AgenteEconomicoServicio.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="Obtener">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgenteEconomico" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerResult" nillable="true" type="q1:AgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idPersona" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerPorPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerPorPersonaResult" nillable="true" type="q2:AgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListado">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerListadoResult" nillable="true" type="q3:ArrayOfAgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoActivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoActivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerListadoActivosResult" nillable="true" type="q4:ArrayOfAgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoInactivos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoInactivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerListadoInactivosResult" nillable="true" type="q5:ArrayOfAgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoPorIdAgenteEconomico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listadoId" nillable="true" type="q6:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoPorIdAgenteEconomicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerListadoPorIdAgenteEconomicoResult" nillable="true" type="q7:ArrayOfAgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgenteEconomicoAgenteTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idAgenteEconomico" type="xs:int" />
+        <xs:element minOccurs="0" name="idAgenteTipo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgenteEconomicoAgenteTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerAgenteEconomicoAgenteTipoResult" nillable="true" type="q8:AgenteEconomicoAgenteTipo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgenteEconomicoInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerAgenteEconomicoInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerAgenteEconomicoInfoResult" nillable="true" type="q9:ArrayOfAgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoPorIdAgenteEconomicoAgenteTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="listadoIds" nillable="true" type="q10:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerListadoPorIdAgenteEconomicoAgenteTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.AgenteEconomico.Contrato" minOccurs="0" name="ObtenerListadoPorIdAgenteEconomicoAgenteTipoResult" nillable="true" type="q11:ArrayOfAgenteEconomico" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

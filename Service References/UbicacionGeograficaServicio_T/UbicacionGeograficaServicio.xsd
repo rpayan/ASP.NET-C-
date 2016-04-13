@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciosweb.ine.gob.ni/UbicacionGeograficaServicio/UbicacionGeograficaServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.UbicacionGeografica.Contrato" />
+  <xs:element name="DameListadoPorPadre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="idPadre" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DameListadoPorPadreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DameListadoPorPadreResult" type="tns:ArrayOfUbicacionGeografica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfUbicacionGeografica">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UbicacionGeografica" nillable="true" type="tns:UbicacionGeografica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UbicacionGeografica">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="IdUbicacionGeografica" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Latitud" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Longitud" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdPadre" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdTipo" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdUsuarioRegistro" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="IdUsuarioModificacion" nillable="true" type="xs:int" />
+      <xs:element minOccurs="1" maxOccurs="1" name="FechaModificacion" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="1" maxOccurs="1" name="Activo" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Padre" type="tns:UbicacionGeografica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DameUbicacionGeografica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="idUbicacionGeografica" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DameUbicacionGeograficaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="DameUbicacionGeograficaResult" type="tns:UbicacionGeografica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarUbicacionPorNombre">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="nombreUbicacionDistribuidora" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="idTipo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarUbicacionPorNombreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="1" name="BuscarUbicacionPorNombreResult" type="tns:UbicacionGeografica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DameUbicacionGeograficaPadrePorTipo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idUbicacionGeografica" type="xs:int" />
+        <xs:element minOccurs="0" name="idUbicacionGeograficaTipo" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DameUbicacionGeograficaPadrePorTipoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.UbicacionGeografica.Contrato" minOccurs="0" name="DameUbicacionGeograficaPadrePorTipoResult" nillable="true" type="q1:UbicacionGeografica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUGTodas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUGTodasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.UbicacionGeografica.Contrato" minOccurs="0" name="ObtenerUGTodasResult" nillable="true" type="q2:ArrayOfUbicacionGeografica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUGActivoTodas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerUGActivoTodasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.UbicacionGeografica.Contrato" minOccurs="0" name="ObtenerUGActivoTodasResult" nillable="true" type="q3:ArrayOfUbicacionGeografica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InventarioServicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.Inventario.Contrato" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInventarioContrato_Obtener_InputMessage">
+    <wsdl:part name="parameters" element="tns:Obtener" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_Obtener_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_ObtenerListadoPorFecha_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorFecha" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_ObtenerListadoPorFecha_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorFechaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_ObtenerListadoPorFechaActivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorFechaActivo" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_ObtenerListadoPorFechaActivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorFechaActivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_ObtenerListadoPorFechaInactivo_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorFechaInactivo" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_ObtenerListadoPorFechaInactivo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerListadoPorFechaInactivoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_Guardar_InputMessage">
+    <wsdl:part name="parameters" element="tns:Guardar" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_Guardar_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_DarAlta_InputMessage">
+    <wsdl:part name="parameters" element="tns:DarAlta" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_DarAlta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DarAltaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_DarBaja_InputMessage">
+    <wsdl:part name="parameters" element="tns:DarBaja" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_DarBaja_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DarBajaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_VerificarInventario_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarInventario" />
+  </wsdl:message>
+  <wsdl:message name="IInventarioContrato_VerificarInventario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificarInventarioResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IInventarioContrato">
+    <wsdl:operation name="Obtener">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/Obtener" message="tns:IInventarioContrato_Obtener_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerResponse" message="tns:IInventarioContrato_Obtener_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorFecha">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFecha" message="tns:IInventarioContrato_ObtenerListadoPorFecha_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaResponse" message="tns:IInventarioContrato_ObtenerListadoPorFecha_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorFechaActivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaActivo" message="tns:IInventarioContrato_ObtenerListadoPorFechaActivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaActivoResponse" message="tns:IInventarioContrato_ObtenerListadoPorFechaActivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorFechaInactivo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaInactivo" message="tns:IInventarioContrato_ObtenerListadoPorFechaInactivo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaInactivoResponse" message="tns:IInventarioContrato_ObtenerListadoPorFechaInactivo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/Guardar" message="tns:IInventarioContrato_Guardar_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/GuardarResponse" message="tns:IInventarioContrato_Guardar_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DarAlta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/DarAlta" message="tns:IInventarioContrato_DarAlta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/DarAltaResponse" message="tns:IInventarioContrato_DarAlta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DarBaja">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/DarBaja" message="tns:IInventarioContrato_DarBaja_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/DarBajaResponse" message="tns:IInventarioContrato_DarBaja_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificarInventario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInventarioContrato/VerificarInventario" message="tns:IInventarioContrato_VerificarInventario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInventarioContrato/VerificarInventarioResponse" message="tns:IInventarioContrato_VerificarInventario_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IInventarioContrato" type="tns:IInventarioContrato">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Obtener">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/Obtener" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorFecha">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFecha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorFechaActivo">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaActivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerListadoPorFechaInactivo">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/ObtenerListadoPorFechaInactivo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Guardar">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/Guardar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DarAlta">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/DarAlta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DarBaja">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/DarBaja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificarInventario">
+      <soap:operation soapAction="http://tempuri.org/IInventarioContrato/VerificarInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="InventarioServicio">
+    <wsdl:port name="BasicHttpBinding_IInventarioContrato" binding="tns:BasicHttpBinding_IInventarioContrato">
+      <soap:address location="http://serviciosweb.ine.gob.ni/InventarioServicio/InventarioServicio.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

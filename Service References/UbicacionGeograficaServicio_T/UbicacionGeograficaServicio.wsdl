@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UbicacionGeograficaServicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/UbicacionGeograficaServicio/UbicacionGeograficaServicio.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/UbicacionGeograficaServicio/UbicacionGeograficaServicio.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://serviciosweb.ine.gob.ni/UbicacionGeograficaServicio/UbicacionGeograficaServicio.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/INE.ServiciosWeb.UbicacionGeografica.Contrato" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUbicacionGeograficaContrato_DameListadoPorPadre_InputMessage">
+    <wsdl:part name="parameters" element="tns:DameListadoPorPadre" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_DameListadoPorPadre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DameListadoPorPadreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_DameUbicacionGeografica_InputMessage">
+    <wsdl:part name="parameters" element="tns:DameUbicacionGeografica" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_DameUbicacionGeografica_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DameUbicacionGeograficaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_BuscarUbicacionPorNombre_InputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUbicacionPorNombre" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_BuscarUbicacionPorNombre_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BuscarUbicacionPorNombreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_DameUbicacionGeograficaPadrePorTipo_InputMessage">
+    <wsdl:part name="parameters" element="tns:DameUbicacionGeograficaPadrePorTipo" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_DameUbicacionGeograficaPadrePorTipo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DameUbicacionGeograficaPadrePorTipoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_ObtenerUGTodas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUGTodas" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_ObtenerUGTodas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUGTodasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_ObtenerUGActivoTodas_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUGActivoTodas" />
+  </wsdl:message>
+  <wsdl:message name="IUbicacionGeograficaContrato_ObtenerUGActivoTodas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerUGActivoTodasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUbicacionGeograficaContrato">
+    <wsdl:operation name="DameListadoPorPadre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/DameListadoPorPadre" message="tns:IUbicacionGeograficaContrato_DameListadoPorPadre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/DameListadoPorPadreResponse" message="tns:IUbicacionGeograficaContrato_DameListadoPorPadre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DameUbicacionGeografica">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/DameUbicacionGeografica" message="tns:IUbicacionGeograficaContrato_DameUbicacionGeografica_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/DameUbicacionGeograficaResponse" message="tns:IUbicacionGeograficaContrato_DameUbicacionGeografica_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUbicacionPorNombre">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/BuscarUbicacionPorNombre" message="tns:IUbicacionGeograficaContrato_BuscarUbicacionPorNombre_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/BuscarUbicacionPorNombreResponse" message="tns:IUbicacionGeograficaContrato_BuscarUbicacionPorNombre_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DameUbicacionGeograficaPadrePorTipo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/DameUbicacionGeograficaPadrePorTipo" message="tns:IUbicacionGeograficaContrato_DameUbicacionGeograficaPadrePorTipo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/DameUbicacionGeograficaPadrePorTipoResponse" message="tns:IUbicacionGeograficaContrato_DameUbicacionGeograficaPadrePorTipo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUGTodas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/ObtenerUGTodas" message="tns:IUbicacionGeograficaContrato_ObtenerUGTodas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/ObtenerUGTodasResponse" message="tns:IUbicacionGeograficaContrato_ObtenerUGTodas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUGActivoTodas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/ObtenerUGActivoTodas" message="tns:IUbicacionGeograficaContrato_ObtenerUGActivoTodas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUbicacionGeograficaContrato/ObtenerUGActivoTodasResponse" message="tns:IUbicacionGeograficaContrato_ObtenerUGActivoTodas_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUbicacionGeograficaContrato" type="tns:IUbicacionGeograficaContrato">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DameListadoPorPadre">
+      <soap:operation soapAction="http://tempuri.org/IUbicacionGeograficaContrato/DameListadoPorPadre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DameUbicacionGeografica">
+      <soap:operation soapAction="http://tempuri.org/IUbicacionGeograficaContrato/DameUbicacionGeografica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BuscarUbicacionPorNombre">
+      <soap:operation soapAction="http://tempuri.org/IUbicacionGeograficaContrato/BuscarUbicacionPorNombre" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DameUbicacionGeograficaPadrePorTipo">
+      <soap:operation soapAction="http://tempuri.org/IUbicacionGeograficaContrato/DameUbicacionGeograficaPadrePorTipo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUGTodas">
+      <soap:operation soapAction="http://tempuri.org/IUbicacionGeograficaContrato/ObtenerUGTodas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerUGActivoTodas">
+      <soap:operation soapAction="http://tempuri.org/IUbicacionGeograficaContrato/ObtenerUGActivoTodas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UbicacionGeograficaServicio">
+    <wsdl:port name="BasicHttpBinding_IUbicacionGeograficaContrato" binding="tns:BasicHttpBinding_IUbicacionGeograficaContrato">
+      <soap:address location="http://serviciosweb.ine.gob.ni/UbicacionGeograficaServicio/UbicacionGeograficaServicio.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08ac75ac-416d-45e2-957b-2fb98dc3e4ad" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SeguridadServicio.xsd" MetadataType="Schema" ID="89e5dad1-dd9c-463f-a262-2b662648df9a" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd4" />
+    <MetadataFile FileName="SeguridadServicio1.xsd" MetadataType="Schema" ID="42b8a441-92f0-4e97-b869-935594e30371" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd1" />
+    <MetadataFile FileName="SeguridadServicio2.xsd" MetadataType="Schema" ID="f9e5a96d-94c5-4792-a307-6d4a7dda64bb" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd0" />
+    <MetadataFile FileName="SeguridadServicio3.xsd" MetadataType="Schema" ID="1cbf37d3-e222-4ee0-8cb2-0adf54bb238d" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd5" />
+    <MetadataFile FileName="SeguridadServicio4.xsd" MetadataType="Schema" ID="8c3b8762-6191-4d93-b21f-f152edf26f6d" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd2" />
+    <MetadataFile FileName="SeguridadServicio.wsdl" MetadataType="Wsdl" ID="19a0c5e0-30fe-4996-8560-df2fd5cec44e" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?wsdl" />
+    <MetadataFile FileName="SeguridadServicio5.xsd" MetadataType="Schema" ID="c416be1c-5abe-4b59-b0e7-9b820ac44b67" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?xsd=xsd3" />
+    <MetadataFile FileName="SeguridadServicio.disco" MetadataType="Disco" ID="29b59465-d6b4-45ec-9598-20c4669f6449" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/SeguridadServicio/SeguridadServicio.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3650b952-ee8d-47f1-8875-c97c1aae0fe0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductoServicio.wsdl" MetadataType="Wsdl" ID="1c0a495c-550d-4fd4-9ca5-a6e6d0d7d7c6" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc?wsdl" />
+    <MetadataFile FileName="ProductoServicio.xsd" MetadataType="Schema" ID="b16e0602-22e7-4ff1-a02b-5abf3eabf33d" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductoServicio1.xsd" MetadataType="Schema" ID="31a49155-5943-42b5-ba49-5d95e5d1b5f8" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc?xsd=xsd1" />
+    <MetadataFile FileName="ProductoServicio2.xsd" MetadataType="Schema" ID="b2f1c002-c5c5-431e-8731-9106e2f66e4d" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductoServicio.disco" MetadataType="Disco" ID="2b34dff6-2b54-4f82-9b1a-c9763cc40c1b" SourceId="1" SourceUrl="http://serviciosweb.ine.gob.ni/ProductoServicio/ProductoServicio.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

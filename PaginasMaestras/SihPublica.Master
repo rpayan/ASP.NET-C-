@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SihPublica.Master.cs" Inherits="Ine.SihPublico.UI.Web.PaginasMaestras.SihPublica" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>SIH-CSI</title>
+    <link href="../Estilos/Selectores/Base.css"  type="text/css" />    
+    <link href="../Estilos/Clases/General.css" rel="stylesheet" type="text/css" />
+    <link href="../Estilos/PaginasMaestras/SihPublica.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../../Scripts/jquery.js"></script>
+    <script type="text/javascript" src="../../Scripts/script.js"></script>
+
+   <asp:ContentPlaceHolder ID="CphEncabezado" runat="server">
+   </asp:ContentPlaceHolder> 
+       
+</head>
+<body>
+<form method="post" runat="server">
+    <asp:ScriptManager ID="ScmPrincipal" runat="server"></asp:ScriptManager>
+    <asp:SiteMapDataSource ID="SmdMenu" runat="server" ShowStartingNode="False" />
+    <asp:Panel ID="PanFondo" runat="server">
+            <asp:Image ID="ImgFondo" runat="server" ImageUrl="~/Imagenes/ImagenFondo.png"/>
+        </asp:Panel>
+    <asp:Panel ID="PanGeneral" runat="server">       
+
+        <asp:Panel ID="PanEncabezado" runat="server">
+             
+        <asp:Image ID="ImgLogo" runat="server" ImageUrl="~/Imagenes/LogoIne.png" />
+
+        <asp:Label ID="LblSistema1" runat="server" Text="Dirección General de Hidrocarburos"></asp:Label>
+         
+        <asp:Label ID="LblSistema2" runat="server" Text="Sistema de Información de Hidrocarburos"></asp:Label>
+
+        <asp:Label ID="LblSistema3" runat="server" Text="Control y Seguimiento de Inventarios de Combustibles - CSI"></asp:Label>
+         
+
+         <asp:Label ID="LblNombreCuenta" runat="server" Text="Label" ForeColor="#F0E9E6" 
+                
+                
+                style="z-index: 1; left: 540px; top: 155px; position: absolute; font-family: Tahoma; font-size: small; text-align: right; width: 245px;"></asp:Label>
+
+ <asp:Label ID="LblSeparador" runat="server" Text="|" ForeColor="White" 
+ 
+                style="z-index: 1; left: 790px; top: 155px; position: absolute; font-family: Tahoma; font-size: small; text-align: right; width: 5px;"></asp:Label>
+
+
+         
+         <asp:LoginStatus ID="LoginStatus1" ForeColor="#CFB4A9" runat="server" 
+         onloggingout="LoginStatus1_LoggingOut" style="z-index: 1; font-family: Tahoma; left: 801px; top: 155px; position: absolute; font-family: Tahoma; font-size: small;" />
+
+
+                <asp:Image ID="ImgAyuda" runat="server" ImageUrl="~/Imagenes/help.png" style="z-index: 1; left: 867px; top: 183px; position: absolute; height: 25px; width: 27px" />
+
+                <asp:HyperLink ID="HyperLinkAyuda" runat="server" Font-Bold="False" 
+                    Font-Names="Tahoma" Font-Size="11px" 
+                    style="z-index: 1;font-family: Tahoma;font-weight: bold; left: 827px; top: 188px; position: absolute" 
+                    NavigateUrl="~/Ayuda/index.html" Target="_blank">Ayuda
+                 </asp:HyperLink>
+
+
+
+            <asp:HyperLink ID="HyperLinkCambiarContrasena" runat="server" NavigateUrl="~/Administracion/CambiarContrasena.aspx" 
+            style="z-index: 1;font-family: Tahoma;font-weight: bold; left: 764px;font-size: 11px; top: 210px; position: absolute">Cambiar Contraseña</asp:HyperLink>
+
+ 
+                <asp:Image ID="ImgCandado" runat="server" ImageUrl="~/Imagenes/lock.png" 
+    
+                
+                style="z-index: 1; left: 876px; top: 155px; position: absolute; height: 18px; width: 19px" />
+
+
+
+        </asp:Panel>
+        <asp:Panel ID="PanCuerpo" runat="server">
+            
+                    <asp:ContentPlaceHolder ID="CphCuerpo" runat="server" >
+                    </asp:ContentPlaceHolder>
+            
+        </asp:Panel>
+        
+        <asp:Panel ID="PanPiePagina" runat="server" >
+          <asp:Label ID="Label2" runat="server" 
+                Text="Instituto Nicaragüense de Energía - Todos los Derechos Reservados" 
+                style="font-family: Tahoma; font-size: small"></asp:Label>
+                <br />
+               <%-- <asp:Label ID="Label1" runat="server" 
+                Text="Rotonda Centroamerica 350 metros al oeste. Managua, Nicaragua" 
+                style="font-family: Tahoma; font-size: small"></asp:Label>
+                <br />--%>
+                <asp:Label ID="Label3" runat="server" 
+                Text="Teléfonos: 2277-5317, 2278-6909" 
+                style="font-family: Tahoma; font-size: small"></asp:Label>
+
+
+
+
+        </asp:Panel>
+
+    </asp:Panel>
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+    
+ 
+</form>
+    
+</body>
+</html>

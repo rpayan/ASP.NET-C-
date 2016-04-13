@@ -1,0 +1,140 @@
+﻿#ctl00_CphCuerpo_PanForm
+{   
+    position:absolute;       
+    left:0px;
+    top:100px;
+    width:980px;
+    height:270px;
+    border-color:#5292E2;
+    border-style:solid;
+    border-width:1px;
+    padding:5px;
+    background-color:White;
+        
+}
+
+#ctl00_CphCuerpo_LblClaveActual
+{
+    position:absolute;
+    left:230px;
+    top:60px;    
+    width:200px;
+}
+
+#ctl00_CphCuerpo_LblClaveNueva
+{
+    position:absolute;
+    left:230px;
+    top:100px;    
+    width:200px;
+}
+
+#ctl00_CphCuerpo_LblClaveNuevaConfirmacion
+{
+    position:absolute;
+    left:230px;
+    top:140px;    
+    width:200px;
+}
+
+#ctl00_CphCuerpo_TxtClaveActual
+{
+    position:absolute;
+    left:450px;
+    top:60px;    
+    width:200px;
+}
+
+#ctl00_CphCuerpo_TxtClaveNueva
+{
+    position:absolute;
+    left:450px;
+    top:100px;    
+    width:200px;
+}
+
+#ctl00_CphCuerpo_TxtClaveNuevaConfirmacion
+{
+    position:absolute;
+    left:450px;
+    top:140px;    
+    width:200px;
+}
+
+
+#ctl00_CphCuerpo_BtnCambiarContrasena
+{
+    position:absolute;
+    left:380px;
+    top:170px;
+    width:160px;
+    height:30px;
+    background-color:#a4a4a5;
+    border-color:#6a6a6a;
+    border-style:solid;
+    border-width:1px;    
+    color:#3c3c3c;        
+    font-weight:bold;
+    background-repeat:no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    background-image:url('../../Imagenes/Aceptar.png');
+    padding-left:37px;
+}
+
+#ctl00_CphCuerpo_BtnCambiarContrasena:hover
+{   
+    cursor:hand;   
+    background-color: #c4c6c6;
+}
+
+#ctl00_BtnCancelar
+{
+    position:absolute;
+    left:545px;
+    top:170px;
+    width:110px;   
+    height:30px;
+    background-color:#a4a4a5;
+    border-color:#6a6a6a;
+    border-style:solid;
+    border-width:1px;    
+    color:#3c3c3c;        
+    font-weight:bold;
+    background-repeat:no-repeat;
+    background-position-x: 2px;
+    background-position-y: 2px;
+    background-image:url('../../Imagenes/Cancelar.png');   
+    padding-left:30px;
+}
+
+#ctl00_CphCuerpo_BtnCancelar:hover
+{
+    cursor:hand;   
+    background-color: #c4c6c6;
+}
+
+#ctl00_CphCuerpo_ImgTitulo
+{
+    position:absolute;
+    left:380px;
+    top:20px;    
+}
+
+#ctl00_CphCuerpo_ImgError
+{
+    position:absolute;
+    left:335px;
+    top:200px;   
+    width:35px;
+    height:35px;
+}
+
+#ctl00_CphCuerpo_LblMensaje
+{
+    position:absolute;
+    left:375px;
+    top:210px;
+    color:Red;
+    font-weight:bold;
+}

@@ -1,0 +1,145 @@
+﻿#PanFondo
+{
+    
+    left:0px;
+    top:0px;
+    position: fixed;
+    width:100%;
+   
+}
+    
+#ImgFondo
+{   
+   position: absolute;
+   top: 0px;
+   max-width:700px;
+   min-width: 800px;
+   height:200px;
+   left: 0px;
+   margin-right: auto;   
+   
+   
+}
+    
+#PanGeneral
+{
+    
+     position:relative;
+     width:898px;
+     margin: 0px auto 0px auto;
+     float:none;         
+     text-align:center;    
+     
+}
+
+#PanEncabezado
+{    
+    position: relative;
+    left:0px;
+    top:0px;
+    background-image: url('../../Imagenes/Encabezado.png');
+    background-position:left;
+    background-repeat:no-repeat;
+    height:182px; /*Antes 171*/
+    width:100%;    
+    margin-top:5px;
+    
+    
+}
+
+#PanMenu
+{
+    
+    position: relative;
+    width:auto;
+    background-image:url('../../Imagenes/Cuerpo.png');
+    background-repeat:repeat-y;
+     
+    
+}
+
+#SmpRuta
+{
+    position:absolute;
+    right:10px;
+    top:0px;   
+    color:Black;
+    font-size:14px;
+    
+    
+}
+
+#PanCuerpo
+{
+    position: relative;        
+    background-image:url('../../Imagenes/Cuerpo.png');
+    background-repeat:repeat-y;
+    width:100%;    
+    padding:5px;
+  
+}
+
+
+#PanPiePagina
+{
+    position: relative;
+    background-image: url('../../Imagenes/PiePagina.png');
+    background-position:left;
+    background-repeat:no-repeat;    
+    height:54px;    
+    width:100%;
+
+    
+}
+
+
+#ImgLogo
+{   
+  /*  background-image: url('../../Imagenes/LogoIne.png'); */
+    position:absolute;
+    left:5px;
+    top:8px;
+    height:120px;
+    width:130px;
+    
+}
+
+#LblSistema1
+{
+    position:absolute;
+    left:20px;
+    top:115px;
+    font-size: 12pt;
+    color:White;
+    font-style:normal;
+    font-weight:bold;
+    font-family:Tahoma;
+ 
+}
+
+#LblSistema2
+{
+    position:absolute;
+    left:20px;
+    top:135px;
+    font-size: 12pt;
+    color:White;
+    font-style:normal;
+    font-weight:bold;
+    font-family:Tahoma;
+ 
+}
+
+#LblSistema3
+{
+    position:absolute;
+    left:20px;
+    top:155px;
+    font-size: 12pt;
+    color:White;
+    font-style:normal;
+    font-weight:bold;
+    font-family:Tahoma;
+ 
+}
+

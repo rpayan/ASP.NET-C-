@@ -1,0 +1,93 @@
+﻿.GrdEstandar 
+{
+    font-size:11px;
+    font-family:Arial; 
+    border-style:none; 
+    border-color:gray;
+    border-width:1px;      
+    color:black;
+}
+
+
+/*GB: Celdas de Encabezado .NET*/
+.GrdEncabezado
+{
+    
+    font-weight:bold;    
+    /*cursor:pointer;*/
+	white-space:nowrap;	
+	border: solid 1px #2c4182;
+	border-top-style: none;
+	/*background-image: url('../Imagenes/TablaEncabezado.gif');*/
+	background-position:top;
+	background-repeat:repeat-x;
+	background-color:#BAB7FF;
+	overflow:hidden;    
+    text-align: center;    
+    vertical-align:middle;
+    color:black;
+    height:23px;
+    padding:1px; 
+}
+
+    
+    
+/*GB: Celdas del contenido de la tabla*/    
+.GrdEstandar tbody td
+{
+    border-left: solid 1px gray;        
+    border-bottom: solid 1px gray;        
+    padding-left:2px;
+    white-space: nowrap;       
+    text-align:left; 
+    vertical-align:middle;
+    cursor:hand;            
+}
+
+
+/*GB: Celdas alineadas a la derecha, (números)*/    
+.GrdCeldaDerecha
+{
+    text-align:right;
+}
+            
+    
+/*GB: Filas*/   
+.GrdFila
+{
+    vertical-align:text-top;
+    cursor:hand;            
+    background-color:whitesmoke;
+    height:23px;
+} 
+
+/*GB: Selector de filas, en esta celda aparecen los números de fila.*/
+.GrdFilaSelector
+{
+    background-color:lightgray;            
+    vertical-align:middle;
+    text-align:center;
+    color:Black;
+} 
+    
+/*GB: Fila Seleccionada*/
+.GrdFilaSeleccionada    
+{
+    background-color:DarkSlateBlue;     
+    color:white;             
+}
+
+/*GB: Fila Seleccionada*/
+.GrdFilaAlerta
+{
+    background-color:LightCoral;         
+}
+
+
+.GrdFilaSeleccionada a
+{
+    color:White;   
+}
+
+
+

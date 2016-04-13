@@ -1,0 +1,19 @@
+﻿.button
+{
+    background:#737473;
+    border: solid 1px grey;
+    font-family: Arial, sans-serif;
+  /*  font-size: 12px; */
+  /*  font-weight: bold;  */ 
+
+}
+
+.button:hover
+{
+    background:#737473;
+    border: solid 1px grey;
+    font-family: Arial, sans-serif;
+ /*   font-size: 12px; */
+ /*   font-weight: bold; */
+
+}

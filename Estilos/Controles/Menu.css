@@ -1,0 +1,77 @@
+﻿.MnuPrincipal 
+{
+    position:relative;
+    left:5px;
+    width:890px;    
+    height:24px;
+    margin-left:3px;
+    padding:0px;
+    margin:0px;
+    background-image:url('../Images/MenuFondo.png');
+    background-repeat:repeat-x;
+    
+    
+}
+
+.MnuPrincipal ul 
+{
+    padding:2px;
+    margin:2px;
+}
+
+.MnuPrincipal ul li
+{
+    color:#2E82CA;    
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 115px;
+    height:25px;
+    background-image:url('../Images/ItemMenuSinSeleccionar.png');
+    background-repeat:no-repeat;
+}
+
+.MnuPrincipal ul li a
+{
+    
+    color:#2E82CA;
+    text-decoration: none;
+    
+}
+
+
+.MnuPrincipal ul li:hover
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 115px;
+    background-image: none;
+    background-image:url('../Images/ItemMenuHover.png');
+    color:#1D6FBB;
+}
+
+
+.MnuPrincipal ul li a:hover
+{
+    
+    color:#1D6FBB;
+    text-decoration: none;
+    
+}
+
+  .staticSelectedStyle
+{
+    background-color: #CCFF33;
+    color: #003300;
+    border-bottom: solid 1px #eee;
+    z-index: 100;
+}
+
+.MnuPrincipal a.static.selected
+{
+    /*background-color: #680840 !important;*/
+    color: #E47009 !important;
+    font-weight:bold;
+    /*text-decoration: none !important;*/
+}

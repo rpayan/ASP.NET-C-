@@ -1,0 +1,29 @@
+﻿
+#CphCuerpo_PanForm
+{   
+    position:relative;       
+    left:0px;
+    top:0px;
+    width:800px;
+    height:310px;
+    background-color:white;
+    padding:5px;
+        
+}
+
+#CphCuerpo_ImgLogin
+{
+    position:absolute;
+    left:75px;
+    top:30px;
+    height:137px;
+    width:151px;
+}
+
+#CphCuerpo_LgnLogin
+{
+    position:absolute;
+    top: 40px;
+    left: 326px;
+    right: 394px;
+}

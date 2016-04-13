@@ -1,0 +1,278 @@
+﻿#CphCuerpo_PanTitulo
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:100%;
+    height:15px;    
+    
+}
+
+#CphCuerpo_LblTitulo
+{
+    width:100%;
+    text-align:center;
+    color: #29166F;
+    font-weight:bold;
+    font-family: "Tahoma";
+}
+
+#CphCuerpo_PanAgenteEconomico
+{
+    position: absolute;
+    left: 0px;
+    top: 15px;
+    height: 80px;
+    width:100%;
+    
+}
+
+#CphCuerpo_PanFiltro
+{
+    position: absolute;
+    left: 0px;
+    top: 95px;
+    height: 20px;
+    width:100%;
+    
+}
+
+
+
+#CphCuerpo_PanAlerta
+{
+    position: absolute;
+    left: 0px;
+    top: 115px;
+    height: 20px;
+    width:100%;
+    
+}
+
+#CphCuerpo_PanGrid
+{
+    position: absolute;
+    left: 0px;
+    top: 135px;
+    height: 280px;
+    width:890px;
+    
+}
+
+#CphCuerpo_PanDetalle
+{
+    position: absolute;
+    left: 0px;
+    top: 410px;
+    height: 200px;
+    width:100%;
+    
+}
+
+#CphCuerpo_LblNombreEstacion
+{
+    position:absolute;  
+    left:5px;    
+    top:10px;                     
+}
+
+#CphCuerpo_LblNombreEstacionValor
+{
+    position:absolute;  
+    left:210px;    
+    top:10px;                     
+}
+
+
+#CphCuerpo_LblDepartamento
+{
+    position:absolute;  
+    left:5px;    
+    top:25px;   
+}
+
+#CphCuerpo_LblDepartamentoValor
+{
+    position:absolute;  
+    left:210px;    
+    top:25px;   
+}
+
+
+#CphCuerpo_LblMunicipio
+{
+    position:absolute;  
+    left:5px;    
+    top:40px;          
+}
+
+#CphCuerpo_LblMunicipioValor
+{
+    position:absolute;  
+    left:210px;    
+    top:40px;          
+}
+
+#CphCuerpo_LblNombreResponsable
+{
+    position:absolute;  
+    left:5px;    
+    top:55px;
+    
+}
+
+#CphCuerpo_LblNombreResponsableValor
+{
+    position:absolute;  
+    left:210px;    
+    top:55px;
+    
+}
+
+#CphCuerpo_LblCorreoElectronico
+{
+    position:absolute;  
+    left:5px;    
+    top:70px;
+    
+}
+
+#CphCuerpo_LblCorreoElectronicoValor
+{
+    position:absolute;  
+    left:210px;    
+    top:70px;
+    
+}
+
+
+
+
+
+
+#CphCuerpo_PanAlerta1
+{
+    position:relative;  
+    left:0px;    
+    top:0px;
+    height:10px;
+    width:500px;
+    padding:5px;
+    background-color:#FFBA9F;    
+
+}   
+
+
+#CphCuerpo_LblAlerta1
+{
+    position:absolute;  
+    left:0px;    
+    top:0px;
+    color:#C30808;
+    padding-left:10px;
+    font-size:15px;
+    font-weight:bold;         
+}
+#CphCuerpo_PanAlerta2
+{
+    position:relative;  
+    left:0px;    
+    top:0px;
+    height:10px;
+    width:500px;
+    padding:5px;
+    background-color:#FFBA9F;  
+  
+}   
+
+
+#CphCuerpo_LblAlerta2
+{
+    position:absolute;  
+    left:0px;    
+    top:0px;
+    font-size:19px;
+    color:#C30808;
+    padding-left:10px;
+    font-size:15px;
+    font-weight:bold;         
+}
+#CphCuerpo_PanSeparador
+{
+    position:relative;  
+    height:20px;
+    width:887px;
+    background-color:#FFFFFF;  
+      
+}
+#CphCuerpo_PanSeparador2
+{
+    position:relative;  
+    height:30px;
+    width:887px;
+    background-color:#FFFFFF;  
+      
+}
+
+#CphCuerpo_PanFormulario
+{
+    overflow: auto;
+    background-color:WhiteSmoke;
+    border: solid 1px gray;
+    background-color:whitesmoke;
+    width:887px;
+    height:150px;
+
+}
+
+#CphCuerpo_PanSeparador3
+{
+    position:relative;  
+    height:30px;
+    width:887px;
+    background-color:#FFFFFF;  
+      
+}
+
+#CphCuerpo_PanObservacion
+{
+    overflow: auto;
+    background-color:WhiteSmoke;
+    border: solid 1px gray;
+    background-color:whitesmoke;
+    width:887px;
+    height:auto;
+
+}
+
+#CphCuerpo_PanSeparador4
+{
+    position:relative;  
+    height:30px;
+    width:887px;
+    background-color:#FFFFFF;  
+      
+}
+#CphCuerpo_PanComprobante0
+{
+
+  padding:10px;
+/*  background-color:#B0C4DE; */
+    background-color:#FFFDF9;
+  
+  width:720px;
+  height:270px;
+}
+
+
+#CphCuerpo_TxtObservacion
+{
+   resize: none;
+}
+
+.modalBackground
+        {
+            background-color: Blue;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+        }

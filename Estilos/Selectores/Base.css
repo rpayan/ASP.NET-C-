@@ -1,0 +1,48 @@
+﻿body   
+{
+   
+   /* font-size: .80em;
+    font-family: Arial, Helvetica, sans-serif, Verdana;*/
+    background:#fff;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;    
+    text-align:center; 
+    width:100%;
+    background-image: url('../Images/TexturaFondo.png');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: top left;
+}
+ 
+form
+{
+    margin: 0 auto; 
+    width:100%;
+    text-align:center; 
+   
+}
+
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+p
+{
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
+
+
